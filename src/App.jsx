@@ -9,6 +9,7 @@ import Job from "./pages/Job";
 import PostJob from "./pages/PostJob";
 import SaveJob from "./pages/SaveJob";
 import MyJobs from "./pages/MyJobs";
+import About from "./pages/About";
 
 const router = createBrowserRouter([
   {
@@ -31,16 +32,20 @@ const router = createBrowserRouter([
         element: <Job />,
       },
       {
-        path: "post-job",
+        path: "/post-job",
         element: <PostJob />,
       },
       {
-        path: "saved-job",
+        path: "/saved-job",
         element: <SaveJob />,
       },
       {
-        path: "my-job",
+        path: "/my-job",
         element: <MyJobs />,
+      },
+      {
+        path: "/about",
+        element: <About/>
       },
     ],
   },
