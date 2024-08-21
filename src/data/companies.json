@@ -1,52 +1,52 @@
 [
   {
     "name": "Meta",
-    "path": "/public/comapnies/facebook-2-logo-svgrepo-com.svg",
+    "path": "/comapnies/facebook-2-logo-svgrepo-com.svg",
     "id": 1
   },
   {
     "name": "Google",
-    "path": "/public/comapnies/google-icon-logo-svgrepo-com.svg",
+    "path": "/comapnies/google-icon-logo-svgrepo-com.svg",
     "id": 2
   },
   {
     "name": "Instagram",
-    "path": "/public/comapnies/instagram-2-1-logo-svgrepo-com.svg",
+    "path": "/comapnies/instagram-2-1-logo-svgrepo-com.svg",
     "id": 3
   },
   {
     "name": "Microsoft",
-    "path": "/public/comapnies/microsoft-logo-svgrepo-com.svg",
+    "path": "/comapnies/microsoft-logo-svgrepo-com.svg",
     "id": 4
   },
   {
     "name": "Netflix",
-    "path": "/public/comapnies/netflix-2-logo-svgrepo-com.svg",
+    "path": "/comapnies/netflix-2-logo-svgrepo-com.svg",
     "id": 5
   },
   {
     "name": "Slack",
-    "path": "/public/comapnies/slack-logo-svgrepo-com.svg",
+    "path": "/comapnies/slack-logo-svgrepo-com.svg",
     "id": 6
   },
   {
     "name": "SnapChat",
-    "path": "/public/comapnies/snapchat-logo-svgrepo-com.svg",
+    "path": "/comapnies/snapchat-logo-svgrepo-com.svg",
     "id": 7
   },
   {
     "name": "Spotify",
-    "path": "/public/comapnies/spotify-1-logo-svgrepo-com.svg",
+    "path": "/comapnies/spotify-1-logo-svgrepo-com.svg",
     "id": 8
   },
   {
     "name": "X",
-    "path": "/public/comapnies/twitter-logo-svgrepo-com.svg",
+    "path": "/comapnies/twitter-logo-svgrepo-com.svg",
     "id": 9
   },
   {
       "name": "Whatsapp",
-      "path": "/public/comapnies/whatsapp-symbol-logo-svgrepo-com.svg",
+      "path": "/comapnies/whatsapp-symbol-logo-svgrepo-com.svg",
     "id": 10
   }
 ]

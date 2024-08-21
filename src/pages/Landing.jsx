@@ -80,7 +80,7 @@ const Landing = () => {
             <CardTitle className="text-4xl ">For Job Seekers</CardTitle>
           </CardHeader>
           <CardContent className="text-2xl">
-            <p>Search,apply and track application and more</p>
+            <p>Search,apply,track application and more</p>
           </CardContent>
         </Card>
         {/* 2nd card */}
