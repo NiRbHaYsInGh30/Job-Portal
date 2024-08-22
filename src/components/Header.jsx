@@ -1,18 +1,20 @@
 import { Link, useSearchParams } from "react-router-dom";
 import { Button } from "../components/ui/button";
-import { SignedIn, SignedOut, SignIn, UserButton } from "@clerk/clerk-react";
-import { Briefcase, BriefcaseBusiness, PenBox } from "lucide-react";
+import { SignedIn, SignedOut, SignIn, UserButton, useUser } from "@clerk/clerk-react";
+import {  BriefcaseBusiness, PenBox } from "lucide-react";
 import { useEffect, useState } from "react";
 
 const Header = () => {
   const [showSignIn, setShowSignIn] = useState(false);
   const [search, setSearch] = useSearchParams();
+  const {user}=useUser();
 
   useEffect(() => {
     if (search.get("sign-in")) {
       setShowSignIn(true);
       setSearch({});
     }
+  // }, [search, setSearch]);
   }, [search]);
 
   const handleClicker = (e) => {
@@ -34,11 +36,14 @@ const Header = () => {
             </Button>
           </SignedOut>
           <SignedIn>
-            <Button variant="purple">
-              <PenBox size={20} className="mr-2"></PenBox>
-              Post a Job
-            </Button>
-            <Link to="/post-job"></Link>
+            {user?.unsafeMetadata?.role === "recruiter" && (
+              <Link to="/post-job">
+                <Button variant="destructive" className="rounded-full">
+                  <PenBox size={20} className="mr-2" />
+                  Post a Job
+                </Button>
+              </Link>
+            )}
             <UserButton
               appearance={{
                 elements: {
@@ -47,13 +52,15 @@ const Header = () => {
               }}
             >
               <UserButton.MenuItems>
-                <UserButton.Link label="My-Jobs"
-                labelIcon={<BriefcaseBusiness size={15}></BriefcaseBusiness>}
-                href="/my-job"
+                <UserButton.Link
+                  label="My-Jobs"
+                  labelIcon={<BriefcaseBusiness size={15}></BriefcaseBusiness>}
+                  href="/my-job"
                 />
-                <UserButton.Link label="Saved-Jobs"
-                labelIcon={<BriefcaseBusiness size={15}></BriefcaseBusiness>}
-                href="/saved-job"
+                <UserButton.Link
+                  label="Saved-Jobs"
+                  labelIcon={<BriefcaseBusiness size={15}></BriefcaseBusiness>}
+                  href="/saved-job"
                 />
               </UserButton.MenuItems>
             </UserButton>

@@ -11,6 +11,7 @@ import SaveJob from "./pages/SaveJob";
 import MyJobs from "./pages/MyJobs";
 import About from "./pages/About";
 import ProtectedRoutes from "./components/ProtectedRoutes";
+import Onboarding from "./pages/Onboarding";
 
 const router = createBrowserRouter([
   {
@@ -24,7 +25,7 @@ const router = createBrowserRouter([
         path: "/onboarding",
         element: (
           <ProtectedRoutes>
-            <Landing />,
+            <Onboarding/>
           </ProtectedRoutes>
         ),
       },
