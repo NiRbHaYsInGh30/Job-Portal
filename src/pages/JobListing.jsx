@@ -1,14 +1,19 @@
-
+import { getJobs } from "/src/api/apiJobs";
+import useFetch from "/src/hooks/use-fetch";
+import { useEffect } from "react";
 
 const JobListing = () => {
-  return (
-    <div>
-      <h1>Job Listing</h1>
-      {/* Add job listing components */}
-      {/* Example: <JobCard /> */}
-      
-    </div>
-  )
-}
+  const {
+    fn: fnJobs,
+    data: dataJobs,
+    loading: loadingJobs,
+  } = useFetch(getJobs, {});
+  console.log(dataJobs);
 
-export default JobListing
+  useEffect(() => {
+    fnJobs();
+  }, []);
+  return <div></div>;
+};
+
+export default JobListing;
